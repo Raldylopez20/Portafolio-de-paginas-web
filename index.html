@@ -8,6 +8,9 @@
     
     <title>Raldy - Web Developer</title>
     
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    
     <!-- Hoja de estilos -->
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -20,7 +23,7 @@
     <header>
         <nav class="container">
             <!-- Logo/Nombre principal -->
-            <div class="logo">RALDY LOPEZ </div>
+            <a href="#home" class="logo">RL </a>
             
             <!-- Links de navegación -->
             <ul class="nav-links">
@@ -41,7 +44,7 @@
         <section id="home" class="hero">
             <div class="hero-content">
                 <!-- Título principal -->
-                <h1>Hola, mi nombre es Raldy Lopez<strong>.</strong></h1>
+                <h1 class="typing-text"><span class="typed-text"></span><span class="cursor">&nbsp;</span></h1>
                 
                 <!-- Subtítulo  
                 <p>Y soy un programador FrontEnd</p>
@@ -87,6 +90,62 @@
                             <a href="https://raldylopez20.github.io/Modeling-Portfolio/index.html" class="project-link">Ver Proyecto →</a>
                         </div>
                     </div>
+
+
+                    <!-- PROYECTO 2 -->
+                    <div class="project-card fade-in delay-2">
+                        <div class="project-image">
+                            <img src="img/diapositive studio.png" alt="Proyecto 2">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-number">02</div>
+                            <h3>Diapositive Studios</h3>
+                            <p>Landing Pages para una agencia de Marketing.</p>
+                            <a href="https://raldylopez20.github.io/Diapositive.Studios//" class="project-link">Ver Proyecto →</a>
+                        </div>
+                    </div>
+
+
+                    <!-- PROYECTO 2 -->
+                    <div class="project-card fade-in delay-2">
+                        <div class="project-image">
+                            <img src="img/joyeria-Gilbert.png" alt="Proyecto 2">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-number">02</div>
+                            <h3>Joyeria Gilbert</h3>
+                            <p>Landing Pages para una joyeria.</p>
+                            <a href="https://raldylopez20.github.io/Joyeria-Gilbert/" class="project-link">Ver Proyecto →</a>
+                        </div>
+                    </div>
+
+                    <!-- PROYECTO 2 -->
+                    <div class="project-card fade-in delay-2">
+                        <div class="project-image">
+                            <img src="img/jaya-motors.png" alt="Proyecto 2">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-number">02</div>
+                            <h3>Jaya Motors</h3>
+                            <p>Landing Pages para un Centro Automotriz.</p>
+                            <a href="https://raldylopez20.github.io/Jaya-Motors/" class="project-link">Ver Proyecto →</a>
+                        </div>
+                    </div>
+
+                    <!-- PROYECTO 2 -->
+                    <div class="project-card fade-in delay-2">
+                        <div class="project-image">
+                            <img src="img/lopez-gilbert.png" alt="Proyecto 2">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-number">02</div>
+                            <h3>Lopez Gilbert</h3>
+                            <p>Landing Pages para una oficina Aseguradora.</p>
+                            <a href="https://raldylopez20.github.io/Lopez-Gilbert-Corredores-de-Seguros/" class="project-link">Ver Proyecto →</a>
+                        </div>
+                    </div>
+
+
 
                     <!-- PROYECTO 2 -->
                     <div class="project-card fade-in delay-2">
@@ -242,7 +301,7 @@
                 
                 <!-- Sección 1: Información sobre ti -->
                 <div class="footer-section">
-                    <h4>Raldy Lopez</h4>
+                    <h4>Ing. Raldy Lopez</h4>
                     <p style="color: #888888;">
                         Desarrollador Web enfocado en el Frontend. Apasionado por crear experiencias digitales únicas y memorables.
                     </p>
@@ -252,21 +311,20 @@
                 <div class="footer-section">
                     <h4>Contactame</h4>
                     <div class="social-links">
-                        <!-- LinkedIn - CAMBIAR el href por tu perfil real -->
-                        <a href="https://www.linkedin.com/in/raldy-lópez-368420230/" target="_blank">
-                            <span>LinkedIn</span>
+                        <!-- LinkedIn -->
+                        <a href="https://www.linkedin.com/in/raldy-lópez-368420230/" target="_blank" class="social-link linkedin">
+                            <i class="bi bi-linkedin"></i>
                         </a>
                         
-                        <!-- Instagram - CAMBIAR el href por tu perfil real -->
-                        <a href="https://www.instagram.com/raldylopez/" target="_blank">
-                            <span>Instagram</span>
+                        <!-- Instagram -->
+                        <a href="https://www.instagram.com/raldylopez/" target="_blank" class="social-link instagram">
+                            <i class="bi bi-instagram"></i>
                         </a>
                         
-                        <!-- WhatsApp - CAMBIAR el número por el tuyo -->
-                        <a href="https://wa.me/18294635850" target="_blank">
-                            <span>WhatsApp</span>
+                        <!-- WhatsApp -->
+                        <a href="https://wa.me/18294635850" target="_blank" class="social-link whatsapp">
+                            <i class="bi bi-whatsapp"></i>
                         </a>
-                    </div>
                 </div>
                 
             </div> <!-- Fin del footer-content -->
@@ -274,6 +332,7 @@
             <!-- Copyright -->
             <div class="copyright">
                 <p>&copy; 2026 Raldy Lopez. Todos los derechos reservados.</p>
+                <p>Developed by <a href="https://raldylopez20.github.io/Landing-page-personal-de-servicios/" target="_blank" class="developer-link">Raldy Lopez</a></p>
             </div>
         </div>
     </footer>
@@ -283,6 +342,45 @@
          Funcionalidad interactiva de la página
          ============================================ -->
     <script>
+        // ========================================
+        // EFECTO TYPING PARA EL H1
+        // Escribe el texto letra por letra con un cursor parpadeante
+        // ========================================
+        const typingText = document.querySelector('.typed-text');
+        const textToType = 'Hola, mi nombre es Raldy Lopez.';
+        let charIndex = 0;
+        let isDeleting = false;
+        let typingSpeed = 100; // Velocidad de escritura en ms
+        
+        function typeText() {
+            if (!isDeleting && charIndex < textToType.length) {
+                // Escribir caracteres
+                typingText.textContent = textToType.substring(0, charIndex + 1);
+                charIndex++;
+                setTimeout(typeText, typingSpeed);
+            } else if (!isDeleting && charIndex === textToType.length) {
+                // Pausa al finalizar antes de borrar (opcional)
+                setTimeout(() => {
+                    isDeleting = true;
+                    typeText();
+                }, 2000); // Pausa de 2 segundos
+            } else if (isDeleting && charIndex > 0) {
+                // Borrar caracteres (opcional, puedes comentar este bloque si no quieres que se borre)
+                typingText.textContent = textToType.substring(0, charIndex - 1);
+                charIndex--;
+                setTimeout(typeText, typingSpeed / 2); // Velocidad de borrado más rápida
+            } else if (isDeleting && charIndex === 0) {
+                // Reiniciar el ciclo
+                isDeleting = false;
+                setTimeout(typeText, 1000); // Pausa antes de empezar de nuevo
+            }
+        }
+        
+        // Iniciar el efecto typing cuando la página cargue
+        window.addEventListener('load', () => {
+            setTimeout(typeText, 1000); // Pequeña demora inicial
+        });
+
         // ========================================
         // SMOOTH SCROLL
         // Hace que al hacer clic en los links de navegación
