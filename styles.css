@@ -514,32 +514,69 @@ footer {
         font-size: 2rem;
     }
 
+    /* Cards más pequeñas y profesionales en móviles */
+    .project-card {
+        border-radius: 12px;              /* Bordes más redondeados */
+        overflow: hidden;                  /* Contenido no se sale */
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Sombra más fuerte */
+        transition: all 0.3s ease;        /* Transición suave */
+        background: rgba(255, 255, 255, 0.05); /* Fondo sutil */
+        backdrop-filter: blur(10px);      /* Efecto glassmorphism */
+        border: 1px solid rgba(255, 255, 255, 0.1); /* Borde sutil */
+    }
+    
+    .project-card:hover {
+        transform: translateY(-5px);      /* Eleva más al hover */
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4); /* Sombra más intensa */
+    }
+
     /* Imagen de proyecto más pequeña en móviles */
     .project-image {
-        height: 150px;                  /* Altura más reducida */
+        height: 120px;                  /* Altura más reducida */
+        overflow: hidden;                /* Contenido no se sale */
     }
     
     /* Contenido del proyecto más compacto */
     .project-content {
-        padding: 1rem;                  /* Menos padding interno */
+        padding: 0.8rem;                /* Padding más pequeño */
+        text-align: center;              /* Centrado para mejor look */
     }
     
-    /* Títulos más pequeños en móviles */
+    /* Títulos más pequeños y elegantes en móviles */
     .project-content h3 {
-        font-size: 1.2rem;              /* Título más pequeño */
-        margin-bottom: 0.5rem;            /* Menos espacio abajo */
+        font-size: 1rem;                /* Título más pequeño */
+        margin-bottom: 0.4rem;          /* Menos espacio abajo */
+        font-weight: 600;               /* Más negrita */
+        color: #ffffff;                 /* Blanco puro */
     }
     
     /* Descripción más compacta */
     .project-content p {
-        font-size: 0.9rem;              /* Texto más pequeño */
-        margin-bottom: 1rem;              /* Menos espacio abajo */
+        font-size: 0.8rem;             /* Texto más pequeño */
+        margin-bottom: 0.8rem;          /* Menos espacio abajo */
+        color: #cccccc;                 /* Gris más claro */
+        line-height: 1.3;               /* Líneas más juntas */
     }
     
-    /* Número más pequeño */
+    /* Número más pequeño y elegante */
     .project-number {
+        font-size: 0.7rem;              /* Más pequeño */
+        margin-bottom: 0.2rem;          /* Menos espacio */
+        color: #888888;                 /* Gris más suave */
+        font-weight: 400;               /* Peso normal */
+    }
+    
+    /* Link más pequeño y elegante */
+    .project-link {
         font-size: 0.8rem;              /* Más pequeño */
-        margin-bottom: 0.3rem;            /* Menos espacio */
+        padding: 0.3rem 0;             /* Padding más pequeño */
+        color: #4CAF50;                 /* Verde llamativo */
+        font-weight: 600;               /* Más negrita */
+    }
+    
+    .project-link:hover {
+        color: #66BB6A;                 /* Verde más claro al hover */
+        border-bottom-color: #4CAF50;   /* Línea verde */
     }
 }
 
