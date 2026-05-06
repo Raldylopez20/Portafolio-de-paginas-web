@@ -172,16 +172,18 @@ nav {
    "Hago sitios web." y "Hola, mi nombre es Raldy"
    ============================================================================ */
 .hero h1 {
-    font-size: 4rem;                    /* Tamaño grande */
+    font-size: clamp(2.2rem, 8vw, 3.2rem); /* Tamaño fluido y más pequeño para evitar saltos */
     margin-bottom: 1rem;                /* Espacio abajo */
     font-weight: 300;                   /* Peso ligero */
     letter-spacing: -2px;               /* Letras más juntas */
+    line-height: 1.2;                   /* Altura de línea más compacta para reducir el salto */
 }
 
 /* Estilos para el efecto typing */
 .typing-text {
     display: inline-block;
-    min-height: 1.2em;                  /* Altura mínima para evitar saltos */
+    min-height: 2.4em;                  /* Espacio reservado para 2 líneas, evita el salto al escribir */
+    vertical-align: top;                /* Alineación consistente */
 }
 
 .typed-text {
@@ -193,10 +195,10 @@ nav {
 .cursor {
     display: inline-block;
     width: 3px;                         /* Ancho del cursor */
-    height: 1.2em;                      /* Altura del cursor */
+    height: 1.1em;                      /* Altura del cursor */
     background-color: #ffffff;          /* Color blanco */
     animation: blink 1s infinite;       /* Animación de parpadeo */
-    vertical-align: text-bottom;        /* Alineación con el texto */
+    vertical-align: middle;             /* Alineación con el texto */
     margin-left: 2px;                   /* Espacio pequeño después del texto */
 }
 
@@ -491,7 +493,7 @@ footer {
 @media (max-width: 768px) {
     /* Hero más pequeño en móviles */
     .hero h1 {
-        font-size: 2.5rem;              /* Título más pequeño */
+        font-size: 2.2rem;              /* Título más compacto en móviles */
     }
 
     .hero p {
