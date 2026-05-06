@@ -181,9 +181,11 @@ nav {
 
 /* Estilos para el efecto typing */
 .typing-text {
-    display: inline-block;
-    min-height: 2.4em;                  /* Espacio reservado para 2 líneas, evita el salto al escribir */
-    vertical-align: top;                /* Alineación consistente */
+    display: block;                     /* Cambiado a block para mayor estabilidad */
+    min-height: 3.6em;                  /* Espacio reservado para 3 líneas, evita el salto al escribir */
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
 }
 
 .typed-text {
@@ -494,6 +496,8 @@ footer {
     /* Hero más pequeño en móviles */
     .hero h1 {
         font-size: 2.2rem;              /* Título más compacto en móviles */
+        min-height: 6em;                /* Más espacio en móviles para evitar saltos */
+        display: block;                 /* Volver a block para que el texto fluya natural */
     }
 
     .hero p {
