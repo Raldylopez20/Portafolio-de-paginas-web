@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portafolio de Raldy Lopez - Desarrollador Frontend">
+    <meta name="author" content="Raldy Lopez">
+    <title>Raldy Lopez — Frontend Developer</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- Preloader -->
+    <div class="preloader" id="preloader"></div>
+
+    <!-- Custom Cursor -->
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-circle" id="cursorCircle"></div>
+
+    <!-- Header -->
+    <header id="header">
+        <nav class="container">
+            <a href="#home" class="logo">RL</a>
+            <ul class="nav-links">
+                <li><a href="#home">Inicio</a></li>
+                <li><a href="#about">Sobre mí</a></li>
+                <li><a href="#projects">Proyectos</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- ===================== HERO ===================== -->
+        <section id="home" class="hero">
+            <canvas id="heroCanvas" class="hero-canvas" aria-hidden="true"></canvas>
+            <div class="hero-deco" aria-hidden="true">FRONTEND</div>
+
+            <!-- Floating project cards -->
+            <div class="hero-cards" aria-hidden="true">
+                <div class="hero-card-float"><img src="img/clickmenu.png" alt=""></div>
+                <div class="hero-card-float"><img src="img/RLopez Auto Import.png" alt=""></div>
+                <div class="hero-card-float"><img src="img/inmoRD.png" alt=""></div>
+                <div class="hero-card-float"><img src="img/diapositive studio.png" alt=""></div>
+                <div class="hero-card-float"><img src="img/jaya-motors.png" alt=""></div>
+                <div class="hero-card-float"><img src="img/GuitarLA.png" alt=""></div>
+                <div class="hero-card-float"><img src="img/nucleus.png" alt=""></div>
+                <div class="hero-card-float"><img src="img/lopez-gilbert.png" alt=""></div>
+            </div>
+
+            <div class="hero-content">
+                <div class="hero-eyebrow"><span>Hola, soy</span></div>
+                <h1 class="hero-name">
+                    <span class="name-wrap">
+                        <span class="word-clip"><span class="word-slide">Ing.</span></span>
+                        <span class="word-clip"><span class="word-slide">Raldy</span></span>
+                        <span class="word-clip"><span class="word-slide">Lopez</span></span><span class="accent">.</span>
+                    </span>
+                </h1>
+                <p class="hero-subtitle">Desarrollador Full Stack · Creador de Experiencias Digitales</p>
+                <div class="hero-actions">
+                    <a href="#projects" class="btn-primary">Ver Proyectos</a>
+                </div>
+            </div>
+            <div class="hero-scroll-indicator" aria-hidden="true">
+                <span class="scroll-label">scroll</span>
+                <div class="scroll-track"><div class="scroll-thumb"></div></div>
+            </div>
+        </section>
+
+        <!-- ===================== ABOUT ===================== -->
+        <section id="about" class="about">
+            <div class="container">
+                <div class="about-grid">
+                    <div class="about-text">
+                        <span class="section-label">Sobre mí</span>
+                        <h2>Construyo interfaces que <em>conectan</em> con las personas.</h2>
+                        <p>Desarrollador Frontend especializado en diseñar interfaces rápidas, modernas y memorables. Me apasiona convertir ideas en experiencias digitales reales con código limpio y animaciones que conectan.</p>
+                    </div>
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <div class="stat-number" data-target="18" data-suffix="+">0</div>
+                            <div class="stat-label">Proyectos construidos</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number" data-target="3" data-suffix="+">0</div>
+                            <div class="stat-label">Años de experiencia</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number" data-target="100" data-suffix="%">0</div>
+                            <div class="stat-label">Frontend</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== MARQUEE ===================== -->
+        <div class="marquee-section" aria-hidden="true">
+            <div class="marquee-track">
+                <div class="marquee-content">
+                    <span>HTML5</span><span class="marquee-dot">◆</span>
+                    <span>CSS3</span><span class="marquee-dot">◆</span>
+                    <span>JavaScript</span><span class="marquee-dot">◆</span>
+                    <span>React</span><span class="marquee-dot">◆</span>
+                    <span>Git</span><span class="marquee-dot">◆</span>
+                    <span>Figma</span><span class="marquee-dot">◆</span>
+                    <span>Responsive Design</span><span class="marquee-dot">◆</span>
+                    <span>UI / UX</span><span class="marquee-dot">◆</span>
+                    <span>Bootstrap</span><span class="marquee-dot">◆</span>
+                    <span>GSAP</span><span class="marquee-dot">◆</span>
+                    <span>HTML5</span><span class="marquee-dot">◆</span>
+                    <span>CSS3</span><span class="marquee-dot">◆</span>
+                    <span>JavaScript</span><span class="marquee-dot">◆</span>
+                    <span>React</span><span class="marquee-dot">◆</span>
+                    <span>Git</span><span class="marquee-dot">◆</span>
+                    <span>Figma</span><span class="marquee-dot">◆</span>
+                    <span>Responsive Design</span><span class="marquee-dot">◆</span>
+                    <span>UI / UX</span><span class="marquee-dot">◆</span>
+                    <span>Bootstrap</span><span class="marquee-dot">◆</span>
+                    <span>GSAP</span><span class="marquee-dot">◆</span>
+                    <span>HTML5</span><span class="marquee-dot">◆</span>
+                    <span>CSS3</span><span class="marquee-dot">◆</span>
+                    <span>JavaScript</span><span class="marquee-dot">◆</span>
+                    <span>React</span><span class="marquee-dot">◆</span>
+                    <span>Git</span><span class="marquee-dot">◆</span>
+                    <span>Figma</span><span class="marquee-dot">◆</span>
+                    <span>Responsive Design</span><span class="marquee-dot">◆</span>
+                    <span>UI / UX</span><span class="marquee-dot">◆</span>
+                    <span>Bootstrap</span><span class="marquee-dot">◆</span>
+                    <span>GSAP</span><span class="marquee-dot">◆</span>
+                </div>
+                <div class="marquee-content" aria-hidden="true">
+                    <span>HTML5</span><span class="marquee-dot">◆</span>
+                    <span>CSS3</span><span class="marquee-dot">◆</span>
+                    <span>JavaScript</span><span class="marquee-dot">◆</span>
+                    <span>React</span><span class="marquee-dot">◆</span>
+                    <span>Git</span><span class="marquee-dot">◆</span>
+                    <span>Figma</span><span class="marquee-dot">◆</span>
+                    <span>Responsive Design</span><span class="marquee-dot">◆</span>
+                    <span>UI / UX</span><span class="marquee-dot">◆</span>
+                    <span>Bootstrap</span><span class="marquee-dot">◆</span>
+                    <span>GSAP</span><span class="marquee-dot">◆</span>
+                    <span>HTML5</span><span class="marquee-dot">◆</span>
+                    <span>CSS3</span><span class="marquee-dot">◆</span>
+                    <span>JavaScript</span><span class="marquee-dot">◆</span>
+                    <span>React</span><span class="marquee-dot">◆</span>
+                    <span>Git</span><span class="marquee-dot">◆</span>
+                    <span>Figma</span><span class="marquee-dot">◆</span>
+                    <span>Responsive Design</span><span class="marquee-dot">◆</span>
+                    <span>UI / UX</span><span class="marquee-dot">◆</span>
+                    <span>Bootstrap</span><span class="marquee-dot">◆</span>
+                    <span>GSAP</span><span class="marquee-dot">◆</span>
+                    <span>HTML5</span><span class="marquee-dot">◆</span>
+                    <span>CSS3</span><span class="marquee-dot">◆</span>
+                    <span>JavaScript</span><span class="marquee-dot">◆</span>
+                    <span>React</span><span class="marquee-dot">◆</span>
+                    <span>Git</span><span class="marquee-dot">◆</span>
+                    <span>Figma</span><span class="marquee-dot">◆</span>
+                    <span>Responsive Design</span><span class="marquee-dot">◆</span>
+                    <span>UI / UX</span><span class="marquee-dot">◆</span>
+                    <span>Bootstrap</span><span class="marquee-dot">◆</span>
+                    <span>GSAP</span><span class="marquee-dot">◆</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===================== PROJECTS ===================== -->
+        <section id="projects" class="projects">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-label">Lo que he construido</span>
+                    <h2 class="section-title">Proyectos</h2>
+                </div>
+
+                <div class="projects-grid">
+
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="img/clickmenu.png" alt="Click Menu" loading="lazy">
+                        </div>
+                        <div class="project-content">
+                            <h3>Click Menu</h3>
+                            <p>Menú digital inteligente, proyecto tipo SaaS.</p>
+                            <a href="https://getclickmenu.com/index" class="project-link" target="_blank" rel="noopener">Ver Proyecto →</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="img/Portafolio-modelaje.png" alt="Modeling Portfolio" loading="lazy">
+                        </div>
+                        <div class="project-content">
+                            <h3>Modeling Portfolio</h3>
+                            <p>Portafolio personal de modelaje web.</p>
+                            <a href="https://raldylopez20.github.io/Modeling-Portfolio/index.html" class="project-link" target="_blank" rel="noopener">Ver Proyecto →</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="img/RLopez Auto Import.png" alt="RLopez Auto Import" loading="lazy">
+                        </div>
+                        <div class="project-content">
+                            <h3>RLopez Auto Import</h3>
+                            <p>Página completa para un dealer de vehículos.</p>
+                            <a href="https://autoimport.riclyn.com/" class="project-link" target="_blank" rel="noopener">Ver Proyecto →</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="img/inmoRD.png" alt="Inmo RD" loading="lazy">
+                        </div>
+                        <div class="project-content">
+                            <h3>Inmo RD</h3>
+                            <p>Página completa para una agencia inmobiliaria.</p>
+                            <a href="https://inmobiliaria.riclyn.com/" class="project-link" target="_blank" rel="noopener">Ver Proyecto →</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="img/diapositive studio.png" alt="Diapositive Studios" loading="lazy">
+                        </div>
+                        <div class="project-content">
+                            <h3>Diapositive Studios</h3>
+                            <p>Landing page para una agencia de marketing.</p>
+                            <a href="https://raldylopez20.github.io/Diapositive.Studios//" class="project-link" target="_blank" rel="noopener">Ver Proyecto →</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="img/joyeria-Gilbert.png" alt="Joyeria Gilbert" loading="lazy">
+                        </div>
+                        <div class="project-content">
+                            <h3>Joyeria Gilbert</h3>
+                            <p>Landing page para una joyería.</p>
+                            <a href="https://raldylopez20.github.io/Joyeria-Gilbert/" class="project-link" target="_blank" rel="noopener">Ver Proyecto →</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="img/jaya-motors.png" alt="Jaya Motors" loading="lazy">
+                        </div>
+                        <div class="project-content">
+                            <h3>Jaya Motors</h3>
+                            <p>Landing page para un centro automotriz.</p>
+                            <a href="https://raldylopez20.github.io/Jaya-Motors/" class="project-link" target="_blank" rel="noopener">Ver Proyecto →</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="img/lopez-gilbert.png" alt="Lopez Gilbert" loading="lazy">
+                        </div>
+                        <div class="project-content">
+                            <h3>Lopez Gilbert</h3>
+                            <p>Landing page para una oficina aseguradora.</p>
+                            <a href="https://raldylopez20.github.io/Lopez-Gilbert-Corredores-de-Seguros/" class="project-link" target="_blank" rel="noopener">Ver Proyecto →</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="img/GuitarLA.png" alt="GuitarLA" loading="lazy">
+                        </div>
+                        <div class="project-content">
+                            <h3>GuitarLA</h3>
+                            <p>Tienda online de guitarras.</p>
+                            <a href="https://raldylopez20.github.io/Guitar-LA/" class="project-link" target="_blank" rel="noopener">Ver Proyecto →</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="img/Blog-de-cafe.png" alt="Blog de Cafe" loading="lazy">
+                        </div>
+                        <div class="project-content">
+                            <h3>Blog de Café</h3>
+                            <p>Blog sobre café.</p>
+                            <a href="https://raldylopez20.github.io/Blog_De_Cafe/" class="project-link" target="_blank" rel="noopener">Ver Proyecto →</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="img/nucleus.png" alt="Nucleus E-Wallet" loading="lazy">
+                        </div>
+                        <div class="project-content">
+                            <h3>Nucleus E-Wallet</h3>
+                            <p>Sitio web sobre una wallet digital.</p>
+                            <a href="https://raldylopez20.github.io/Nucleus-ewallet/#" class="project-link" target="_blank" rel="noopener">Ver Proyecto →</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="img/Arquitectura-Bosque.png" alt="Arquitectura Bosque" loading="lazy">
+                        </div>
+                        <div class="project-content">
+                            <h3>Arquitectura Bosque</h3>
+                            <p>Sitio web de una constructora de casas.</p>
+                            <a href="https://raldylopez20.github.io/ArquitecturaBosque/" class="project-link" target="_blank" rel="noopener">Ver Proyecto →</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="img/lopez-pro.png" alt="Lopez Pro" loading="lazy">
+                        </div>
+                        <div class="project-content">
+                            <h3>Lopez Pro</h3>
+                            <p>Tienda online de audífonos.</p>
+                            <a href="https://raldylopez20.github.io/Tienda-audifonos/" class="project-link" target="_blank" rel="noopener">Ver Proyecto →</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="img/Frontend-store.png" alt="Frontend Store" loading="lazy">
+                        </div>
+                        <div class="project-content">
+                            <h3>Frontend Store</h3>
+                            <p>Tienda de ropa online.</p>
+                            <a href="https://raldylopez20.github.io/Frontend-Store/" class="project-link" target="_blank" rel="noopener">Ver Proyecto →</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="img/Tienda-de-muebles.png" alt="Muebleria" loading="lazy">
+                        </div>
+                        <div class="project-content">
+                            <h3>Mueblería</h3>
+                            <p>Sitio web para una mueblería.</p>
+                            <a href="https://raldylopez20.github.io/Ecommerce-Tienda-Muebleria/" class="project-link" target="_blank" rel="noopener">Ver Proyecto →</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="img/red-social.png" alt="Red Social" loading="lazy">
+                        </div>
+                        <div class="project-content">
+                            <h3>Red Social</h3>
+                            <p>Red social estilo Facebook.</p>
+                            <a href="https://raldylopez20.github.io/Red-Social-Estilo-Facebook/" class="project-link" target="_blank" rel="noopener">Ver Proyecto →</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="img/album-basico.png" alt="Album de Fotos" loading="lazy">
+                        </div>
+                        <div class="project-content">
+                            <h3>Álbum de Fotos</h3>
+                            <p>Álbum básico de fotos.</p>
+                            <a href="https://raldylopez20.github.io/Album-basico-de-fotos/" class="project-link" target="_blank" rel="noopener">Ver Proyecto →</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="img/blog-periodico.png" alt="Blog tipo Periodico" loading="lazy">
+                        </div>
+                        <div class="project-content">
+                            <h3>Blog tipo Periódico</h3>
+                            <p>Blog con estilo de periódico digital.</p>
+                            <a href="https://raldylopez20.github.io/Blog-Tipo-Periodico/" class="project-link" target="_blank" rel="noopener">Ver Proyecto →</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="logo">RL</span>
+                    <p>Desarrollador Full Stack enfocado en crear experiencias digitales únicas y memorables.</p>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contáctame</h4>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/raldy-lópez-368420230/" target="_blank" rel="noopener" class="social-link linkedin">
+                            <i class="bi bi-linkedin"></i>
+                        </a>
+                        <a href="https://www.instagram.com/raldylopez/" target="_blank" rel="noopener" class="social-link instagram">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+                        <a href="https://wa.me/18294635850" target="_blank" rel="noopener" class="social-link whatsapp">
+                            <i class="bi bi-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Ing. Raldy Lopez. Todos los derechos reservados.</p>
+                <p>Developed by <a href="https://raldylopez20.github.io/Landing-page-personal-de-servicios/" target="_blank" rel="noopener" class="developer-link">Ing. Raldy Lopez</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <!-- Lenis Smooth Scroll -->
+    <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+    <!-- Vanilla Tilt 3D cards -->
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.8.1/dist/vanilla-tilt.min.js"></script>
+
+    <script>
+    // ============================================================
+    // PRELOADER
+    // ============================================================
+    const preloader = document.getElementById('preloader');
+    window.addEventListener('load', () => {
+        setTimeout(() => { preloader.classList.add('hidden'); }, 300);
+    });
+
+
+    // ============================================================
+    // LENIS SMOOTH SCROLL
+    // ============================================================
+    const lenis = new Lenis({
+        duration: 1.2,
+        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+        smooth: true
+    });
+
+    function raf(time) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+    }
+    requestAnimationFrame(raf);
+
+    // ============================================================
+    // GSAP SETUP
+    // ============================================================
+    gsap.registerPlugin(ScrollTrigger);
+
+    lenis.on('scroll', ScrollTrigger.update);
+    gsap.ticker.add((time) => { lenis.raf(time * 1000); });
+    gsap.ticker.lagSmoothing(0);
+
+    // ============================================================
+    // CUSTOM CURSOR
+    // ============================================================
+    const cursorDot    = document.getElementById('cursorDot');
+    const cursorCircle = document.getElementById('cursorCircle');
+    const isTouch      = window.matchMedia('(hover: none)').matches;
+
+    if (!isTouch) {
+        document.body.style.cursor = 'none';
+        document.querySelectorAll('a, button, .project-card').forEach(el => {
+            el.style.cursor = 'none';
+        });
+
+        let mouseX = 0, mouseY = 0;
+        let circleX = 0, circleY = 0;
+
+        document.addEventListener('mousemove', (e) => {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+            gsap.to(cursorDot, { x: mouseX, y: mouseY, duration: 0.08, ease: 'none' });
+        });
+
+        (function animateCircle() {
+            circleX += (mouseX - circleX) * 0.1;
+            circleY += (mouseY - circleY) * 0.1;
+            cursorCircle.style.left = circleX + 'px';
+            cursorCircle.style.top  = circleY + 'px';
+            requestAnimationFrame(animateCircle);
+        })();
+
+        document.querySelectorAll('a, button, .project-card').forEach(el => {
+            el.addEventListener('mouseenter', () => {
+                cursorCircle.classList.add('expanded');
+                cursorDot.classList.add('hidden');
+            });
+            el.addEventListener('mouseleave', () => {
+                cursorCircle.classList.remove('expanded');
+                cursorDot.classList.remove('hidden');
+            });
+        });
+
+        document.addEventListener('mouseleave', () => {
+            gsap.to([cursorDot, cursorCircle], { opacity: 0, duration: 0.2 });
+        });
+        document.addEventListener('mouseenter', () => {
+            gsap.to([cursorDot, cursorCircle], { opacity: 1, duration: 0.2 });
+        });
+    }
+
+    // ============================================================
+    // HEADER — scroll shrink + active nav
+    // ============================================================
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+        header.classList.toggle('scrolled', window.scrollY > 60);
+    });
+
+    const navLinks = document.querySelectorAll('.nav-links a');
+    const sections = document.querySelectorAll('section[id]');
+
+    const navObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                navLinks.forEach(link => {
+                    link.classList.toggle('active', link.getAttribute('href') === '#' + entry.target.id);
+                });
+            }
+        });
+    }, { threshold: 0.35 });
+
+    sections.forEach(sec => navObserver.observe(sec));
+
+    // ============================================================
+    // HERO — FLOATING CARDS
+    // ============================================================
+    const isMobile = window.innerWidth <= 768;
+    const cardConfigs = isMobile ? [
+        { left: '62%', top: '5%',  rot:  7, w: 95,  depth: 0 },
+        { left: '-4%', top: '58%', rot: -6, w: 88,  depth: 0 },
+        { left: '72%', top: '56%', rot: 10, w: 82,  depth: 0 },
+    ] : [
+        { left: '0%',  top: '8%',  rot: -11, w: 170, depth: 1.2 },
+        { left: '73%', top: '4%',  rot:   8, w: 155, depth: 0.9 },
+        { left: '85%', top: '36%', rot:  -5, w: 185, depth: 1.5 },
+        { left: '75%', top: '66%', rot:  12, w: 150, depth: 1.0 },
+        { left: '26%', top: '80%', rot:  -8, w: 160, depth: 1.3 },
+        { left: '-2%', top: '54%', rot:   6, w: 145, depth: 0.8 },
+        { left: '12%', top: '26%', rot: -13, w: 175, depth: 1.1 },
+        { left: '62%', top: '76%', rot:   9, w: 162, depth: 0.7 },
+    ];
+
+    const floatCards = document.querySelectorAll('.hero-card-float');
+
+    floatCards.forEach((card, i) => {
+        const cfg = cardConfigs[i];
+        if (!cfg) {
+            gsap.set(card, { display: 'none' });
+            return;
+        }
+
+        gsap.set(card, { left: cfg.left, top: cfg.top, rotation: cfg.rot, width: cfg.w, opacity: 0, y: 20 });
+
+        // Entrance after hero text animates
+        gsap.to(card, {
+            opacity: isMobile ? 0.28 + (i % 3) * 0.06 : 0.14 + (i % 4) * 0.04,
+            y: 0,
+            duration: 1,
+            delay: 0.7 + i * 0.1,
+            ease: 'power3.out'
+        });
+
+        // Continuous float — only y + rotation (x reserved for parallax)
+        const floatY   = -12 + Math.random() * 24;
+        const floatRot = cfg.rot + (Math.random() - 0.5) * 8;
+        const floatDur = 2.5 + Math.random() * 2.5;
+        const tl = gsap.timeline({ repeat: -1, yoyo: true, delay: Math.random() * 2 });
+        tl.to(card, { y: floatY, rotation: floatRot, duration: floatDur, ease: 'sine.inOut' });
+    });
+
+    // Mouse parallax — x only, no conflict with float
+    document.addEventListener('mousemove', (e) => {
+        const mx = (e.clientX - window.innerWidth / 2) / (window.innerWidth / 2);
+        floatCards.forEach((card, i) => {
+            if (!cardConfigs[i]) return;
+            gsap.to(card, { x: mx * cardConfigs[i].depth * 24, duration: 1.4, ease: 'power2.out' });
+        });
+    });
+
+    // ============================================================
+    // HERO TIMELINE
+    // ============================================================
+    const heroTl = gsap.timeline({ delay: 0.4 });
+    heroTl
+        .from('.hero-deco',         { opacity: 0, scale: 0.88, duration: 2.5, ease: 'power2.out' }, 0)
+        .from('.hero-eyebrow span', { y: 40, opacity: 0, duration: 0.8, ease: 'power3.out' }, 0.4)
+        .from('.word-slide',        { y: '115%', stagger: 0.1, duration: 1.0, ease: 'power4.out' }, 0.65)
+        .from('.accent',            { opacity: 0, duration: 0.4 }, 1.3)
+        .from('.hero-subtitle',     { y: 30, opacity: 0, duration: 0.8, ease: 'power3.out' }, 1.2)
+        .from('.btn-primary, .btn-ghost', { y: 20, opacity: 0, stagger: 0.12, duration: 0.6, ease: 'power3.out' }, 1.5)
+        .from('.hero-scroll-indicator',   { opacity: 0, duration: 0.6 }, 1.9);
+
+
+    // ============================================================
+    // ABOUT SECTION
+    // ============================================================
+    gsap.from('.about-text .section-label', {
+        scrollTrigger: { trigger: '.about', start: 'top 78%' },
+        opacity: 0, y: 20, duration: 0.6
+    });
+    gsap.from('.about-text h2', {
+        scrollTrigger: { trigger: '.about-text', start: 'top 75%' },
+        opacity: 0, y: 55, duration: 1, ease: 'power3.out', delay: 0.1
+    });
+    gsap.from('.about-text p', {
+        scrollTrigger: { trigger: '.about-text', start: 'top 72%' },
+        opacity: 0, y: 30, duration: 0.8, delay: 0.25
+    });
+    gsap.from('.stat-item', {
+        scrollTrigger: { trigger: '.about-stats', start: 'top 78%' },
+        opacity: 0, y: 40, stagger: 0.15, duration: 0.7, ease: 'power3.out'
+    });
+
+    // Stats counter
+    document.querySelectorAll('.stat-number').forEach(el => {
+        const target = parseInt(el.dataset.target);
+        const suffix = el.dataset.suffix || '';
+        const obj    = { val: 0 };
+        ScrollTrigger.create({
+            trigger: el,
+            start: 'top 82%',
+            once: true,
+            onEnter: () => {
+                gsap.to(obj, {
+                    val: target,
+                    duration: 1.8,
+                    ease: 'power2.out',
+                    onUpdate: () => { el.textContent = Math.round(obj.val) + suffix; }
+                });
+            }
+        });
+    });
+
+    // ============================================================
+    // SECTION HEADER (Proyectos)
+    // ============================================================
+    gsap.from('.section-header .section-label', {
+        scrollTrigger: { trigger: '.section-header', start: 'top 82%' },
+        opacity: 0, y: 20, duration: 0.6
+    });
+    gsap.from('.section-title', {
+        scrollTrigger: { trigger: '.section-header', start: 'top 80%' },
+        opacity: 0, y: 50, duration: 0.9, ease: 'power3.out', delay: 0.1
+    });
+
+    // ============================================================
+    // PROJECT CARDS — stagger per row
+    // ============================================================
+    gsap.utils.toArray('.project-card').forEach((card, i) => {
+        gsap.from(card, {
+            scrollTrigger: { trigger: card, start: 'top 90%', once: true },
+            opacity: 0,
+            y: 60,
+            duration: 0.7,
+            ease: 'power3.out',
+            delay: (i % 3) * 0.08
+        });
+    });
+
+    // ============================================================
+    // SMOOTH SCROLL VIA LENIS
+    // ============================================================
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) lenis.scrollTo(target, { offset: -80, duration: 1.4 });
+        });
+    });
+
+    // ============================================================
+    // SPOTLIGHT CURSOR — luz que sigue el mouse en el fondo
+    // ============================================================
+    document.addEventListener('mousemove', (e) => {
+        document.documentElement.style.setProperty('--mx', e.clientX + 'px');
+        document.documentElement.style.setProperty('--my', e.clientY + 'px');
+    });
+
+    // ============================================================
+    // CANVAS PARTICLES — campo de partículas en el hero
+    // ============================================================
+    const heroCanvas = document.getElementById('heroCanvas');
+    const ctx = heroCanvas.getContext('2d');
+    let W = heroCanvas.width  = window.innerWidth;
+    let H = heroCanvas.height = window.innerHeight;
+
+    const DOTS = 65;
+    const CONNECT_DIST = 110;
+    let mouseParticle = { x: W / 2, y: H / 2 };
+
+    class Dot {
+        constructor() { this.init(); }
+        init() {
+            this.x  = Math.random() * W;
+            this.y  = Math.random() * H;
+            this.vx = (Math.random() - 0.5) * 0.35;
+            this.vy = (Math.random() - 0.5) * 0.35;
+            this.r  = Math.random() * 1.2 + 0.4;
+            this.a  = Math.random() * 0.35 + 0.1;
+        }
+        update() {
+            this.x += this.vx;
+            this.y += this.vy;
+            if (this.x < 0 || this.x > W) this.vx *= -1;
+            if (this.y < 0 || this.y > H) this.vy *= -1;
+        }
+        draw() {
+            ctx.beginPath();
+            ctx.arc(this.x, this.y, this.r, 0, Math.PI * 2);
+            ctx.fillStyle = `rgba(255,255,255,${this.a})`;
+            ctx.fill();
+        }
+    }
+
+    const dots = Array.from({ length: DOTS }, () => new Dot());
+    let particleRaf;
+    let heroVisible = true;
+
+    function drawParticles() {
+        ctx.clearRect(0, 0, W, H);
+        dots.forEach(d => { d.update(); d.draw(); });
+
+        // Conexiones entre puntos cercanos
+        for (let i = 0; i < dots.length; i++) {
+            for (let j = i + 1; j < dots.length; j++) {
+                const dx   = dots[i].x - dots[j].x;
+                const dy   = dots[i].y - dots[j].y;
+                const dist = Math.sqrt(dx * dx + dy * dy);
+                if (dist < CONNECT_DIST) {
+                    ctx.beginPath();
+                    ctx.moveTo(dots[i].x, dots[i].y);
+                    ctx.lineTo(dots[j].x, dots[j].y);
+                    ctx.strokeStyle = `rgba(255,255,255,${0.07 * (1 - dist / CONNECT_DIST)})`;
+                    ctx.lineWidth = 0.5;
+                    ctx.stroke();
+                }
+            }
+        }
+        if (heroVisible) particleRaf = requestAnimationFrame(drawParticles);
+    }
+    drawParticles();
+
+    // Pausa las partículas cuando el hero sale del viewport (performance)
+    new IntersectionObserver(([entry]) => {
+        heroVisible = entry.isIntersecting;
+        if (heroVisible) drawParticles();
+    }, { threshold: 0.1 }).observe(document.querySelector('.hero'));
+
+    document.addEventListener('mousemove', (e) => { mouseParticle = { x: e.clientX, y: e.clientY }; });
+    window.addEventListener('resize', () => {
+        W = heroCanvas.width  = window.innerWidth;
+        H = heroCanvas.height = window.innerHeight;
+    });
+
+    // ============================================================
+    // VANILLA TILT — cards 3D con tilt + reflejo de luz
+    // ============================================================
+    VanillaTilt.init(document.querySelectorAll('.project-card'), {
+        max:        10,
+        speed:      500,
+        glare:      true,
+        'max-glare': 0.12,
+        scale:      1.03,
+        perspective: 900,
+        gyroscope:  false
+    });
+
+    // ============================================================
+    // BOTONES MAGNÉTICOS en el hero
+    // ============================================================
+    document.querySelectorAll('.btn-primary, .btn-ghost').forEach(btn => {
+        btn.addEventListener('mousemove', (e) => {
+            const rect = btn.getBoundingClientRect();
+            const x = (e.clientX - rect.left - rect.width  / 2) * 0.35;
+            const y = (e.clientY - rect.top  - rect.height / 2) * 0.35;
+            gsap.to(btn, { x, y, duration: 0.3, ease: 'power2.out' });
+        });
+        btn.addEventListener('mouseleave', () => {
+            gsap.to(btn, { x: 0, y: 0, duration: 0.6, ease: 'elastic.out(1, 0.4)' });
+        });
+    });
+    </script>
+
+
+</body>
+</html>
