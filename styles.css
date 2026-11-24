@@ -172,11 +172,14 @@ nav {
    ============================================================================ */
 .hero {
     min-height: 100vh;
+    min-height: 100svh;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding-top: 80px;
+    padding: 96px 0 2rem;
+    gap: clamp(2rem, 5vh, 3.5rem);
     position: relative;
     overflow: hidden;
 }
@@ -201,6 +204,7 @@ nav {
     z-index: 1;
     max-width: 1000px;
     padding: 0 1.5rem;
+    margin: auto 0;
 }
 
 .hero-eyebrow {
@@ -359,15 +363,13 @@ body::after {
 
 /* Scroll indicator */
 .hero-scroll-indicator {
-    position: absolute;
-    bottom: 2.5rem;
-    left: 50%;
-    transform: translateX(-50%);
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 0.5rem;
     z-index: 1;
+    flex-shrink: 0;
 }
 
 .scroll-label {
@@ -745,6 +747,29 @@ footer {
 /* ============================================================================
    RESPONSIVE
    ============================================================================ */
+@media (max-height: 780px) {
+    .hero {
+        padding: 80px 0 1.25rem;
+        gap: 1.75rem;
+    }
+
+    .name-wrap {
+        font-size: clamp(3rem, 8.5vw, 5.5rem);
+    }
+
+    .hero-name {
+        margin-bottom: 1.1rem;
+    }
+
+    .hero-subtitle {
+        margin-bottom: 1.8rem;
+    }
+
+    .scroll-track {
+        height: 36px;
+    }
+}
+
 @media (max-width: 1024px) {
     .about-grid {
         grid-template-columns: 1fr;
