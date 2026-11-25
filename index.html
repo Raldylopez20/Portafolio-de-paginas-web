@@ -53,6 +53,8 @@
                 <div class="hero-card-float"><img src="img/GuitarLA.png" alt=""></div>
                 <div class="hero-card-float"><img src="img/nucleus.png" alt=""></div>
                 <div class="hero-card-float"><img src="img/lopez-gilbert.png" alt=""></div>
+                <div class="hero-card-float"><img src="img/blahkcolors.png" alt=""></div>
+                <div class="hero-card-float"><img src="img/devstudio.jpg" alt=""></div>
             </div>
 
             <div class="hero-content">
@@ -61,7 +63,7 @@
                     <span class="name-wrap">
                         <span class="word-clip"><span class="word-slide">Ing.</span></span>
                         <span class="word-clip"><span class="word-slide">Raldy</span></span>
-                        <span class="word-clip"><span class="word-slide">Lopez</span></span><span class="accent">.</span>
+                        <span class="word-clip"><span class="word-slide">Lopez<span class="accent">.</span></span></span>
                     </span>
                 </h1>
                 <p class="hero-subtitle">Desarrollador Full Stack · Creador de Experiencias Digitales</p>
@@ -195,12 +197,34 @@
 
                     <div class="project-card">
                         <div class="project-image">
+                            <img src="img/devstudio.jpg" alt="DevStudio" loading="lazy">
+                        </div>
+                        <div class="project-content">
+                            <h3>DevStudio</h3>
+                            <p>Web para una agencia de servicios.</p>
+                            <a href="https://devstudiord.com" class="project-link" target="_blank" rel="noopener">Ver Proyecto →</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-image">
                             <img src="img/Portafolio-modelaje.png" alt="Modeling Portfolio" loading="lazy">
                         </div>
                         <div class="project-content">
                             <h3>Modeling Portfolio</h3>
                             <p>Portafolio personal de modelaje web.</p>
                             <a href="https://raldylopez20.github.io/Modeling-Portfolio/index.html" class="project-link" target="_blank" rel="noopener">Ver Proyecto →</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="img/blahkcolors.png" alt="Blahkcolors" loading="lazy">
+                        </div>
+                        <div class="project-content">
+                            <h3>Blahkcolors</h3>
+                            <p>Ecommerce para una marca de ropa.</p>
+                            <a href="https://blahkcolors.com" class="project-link" target="_blank" rel="noopener">Ver Proyecto →</a>
                         </div>
                     </div>
 
@@ -515,54 +539,68 @@
         header.classList.toggle('scrolled', window.scrollY > 60);
     });
 
-    const navLinks = document.querySelectorAll('.nav-links a');
-    const sections = document.querySelectorAll('section[id]');
+    const navLinks = Array.from(document.querySelectorAll('.nav-links a'));
+    const navSections = navLinks
+        .map(link => document.querySelector(link.getAttribute('href')))
+        .filter(Boolean);
 
-    const navObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                navLinks.forEach(link => {
-                    link.classList.toggle('active', link.getAttribute('href') === '#' + entry.target.id);
-                });
+    function updateActiveNav() {
+        const atBottom = window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 40;
+        let currentId = navSections[0]?.id || '';
+
+        if (atBottom && navSections.length) {
+            currentId = navSections[navSections.length - 1].id;
+        } else {
+            const triggerLine = Math.max(header.offsetHeight + 40, window.innerHeight * 0.32);
+            for (const sec of navSections) {
+                if (sec.getBoundingClientRect().top <= triggerLine) {
+                    currentId = sec.id;
+                }
             }
-        });
-    }, { threshold: 0.35 });
+        }
 
-    sections.forEach(sec => navObserver.observe(sec));
+        navLinks.forEach(link => {
+            link.classList.toggle('active', link.getAttribute('href') === '#' + currentId);
+        });
+    }
+
+    window.addEventListener('scroll', updateActiveNav, { passive: true });
+    window.addEventListener('resize', updateActiveNav, { passive: true });
+    lenis.on('scroll', updateActiveNav);
+    updateActiveNav();
 
     // ============================================================
     // HERO — FLOATING CARDS
     // ============================================================
-    const isMobile = window.innerWidth <= 768;
-    const cardConfigs = isMobile ? [
-        { left: '62%', top: '5%',  rot:  7, w: 95,  depth: 0 },
-        { left: '-4%', top: '58%', rot: -6, w: 88,  depth: 0 },
-        { left: '72%', top: '56%', rot: 10, w: 82,  depth: 0 },
-    ] : [
-        { left: '0%',  top: '8%',  rot: -11, w: 170, depth: 1.2 },
-        { left: '73%', top: '4%',  rot:   8, w: 155, depth: 0.9 },
-        { left: '85%', top: '36%', rot:  -5, w: 185, depth: 1.5 },
-        { left: '75%', top: '66%', rot:  12, w: 150, depth: 1.0 },
-        { left: '26%', top: '80%', rot:  -8, w: 160, depth: 1.3 },
-        { left: '-2%', top: '54%', rot:   6, w: 145, depth: 0.8 },
-        { left: '12%', top: '26%', rot: -13, w: 175, depth: 1.1 },
-        { left: '62%', top: '76%', rot:   9, w: 162, depth: 0.7 },
-    ];
+    const getCardConfigs = () => {
+        const mobile = window.innerWidth <= 768;
+        const scale = mobile ? 0.72 : 1;
+        return [
+            { left: '0%',  top: '8%',  rot: -11, w: Math.round(170 * scale), depth: mobile ? 0 : 1.2 },
+            { left: '73%', top: '4%',  rot:   8, w: Math.round(155 * scale), depth: mobile ? 0 : 0.9 },
+            { left: '85%', top: '36%', rot:  -5, w: Math.round(185 * scale), depth: mobile ? 0 : 1.5 },
+            { left: '75%', top: '66%', rot:  12, w: Math.round(150 * scale), depth: mobile ? 0 : 1.0 },
+            { left: '26%', top: '80%', rot:  -8, w: Math.round(160 * scale), depth: mobile ? 0 : 1.3 },
+            { left: '-2%', top: '54%', rot:   6, w: Math.round(145 * scale), depth: mobile ? 0 : 0.8 },
+            { left: '12%', top: '26%', rot: -13, w: Math.round(175 * scale), depth: mobile ? 0 : 1.1 },
+            { left: '62%', top: '76%', rot:   9, w: Math.round(162 * scale), depth: mobile ? 0 : 0.7 },
+            { left: '58%', top: '14%', rot:   7, w: Math.round(156 * scale), depth: mobile ? 0 : 1.0 },
+            { left: '5%',  top: '76%', rot:  -9, w: Math.round(154 * scale), depth: mobile ? 0 : 1.1 },
+        ];
+    };
 
+    let cardConfigs = getCardConfigs();
     const floatCards = document.querySelectorAll('.hero-card-float');
 
     floatCards.forEach((card, i) => {
         const cfg = cardConfigs[i];
-        if (!cfg) {
-            gsap.set(card, { display: 'none' });
-            return;
-        }
+        if (!cfg) return;
 
         gsap.set(card, { left: cfg.left, top: cfg.top, rotation: cfg.rot, width: cfg.w, opacity: 0, y: 20 });
 
         // Entrance after hero text animates
         gsap.to(card, {
-            opacity: isMobile ? 0.28 + (i % 3) * 0.06 : 0.14 + (i % 4) * 0.04,
+            opacity: 0.14 + (i % 4) * 0.04,
             y: 0,
             duration: 1,
             delay: 0.7 + i * 0.1,
@@ -575,6 +613,15 @@
         const floatDur = 2.5 + Math.random() * 2.5;
         const tl = gsap.timeline({ repeat: -1, yoyo: true, delay: Math.random() * 2 });
         tl.to(card, { y: floatY, rotation: floatRot, duration: floatDur, ease: 'sine.inOut' });
+    });
+
+    window.addEventListener('resize', () => {
+        cardConfigs = getCardConfigs();
+        floatCards.forEach((card, i) => {
+            const cfg = cardConfigs[i];
+            if (!cfg) return;
+            gsap.set(card, { left: cfg.left, top: cfg.top, width: cfg.w });
+        });
     });
 
     // Mouse parallax — x only, no conflict with float
@@ -764,7 +811,8 @@
     // ============================================================
     // VANILLA TILT — cards 3D con tilt + reflejo de luz
     // ============================================================
-    VanillaTilt.init(document.querySelectorAll('.project-card'), {
+    const projectCards = document.querySelectorAll('.project-card');
+    VanillaTilt.init(projectCards, {
         max:        10,
         speed:      500,
         glare:      true,
@@ -772,6 +820,29 @@
         scale:      1.03,
         perspective: 900,
         gyroscope:  false
+    });
+
+    // Soporte táctil fluido en móviles (sin bloquear el scroll)
+    projectCards.forEach(card => {
+        card.addEventListener('touchstart', (e) => {
+            if (!card.vanillaTilt || !e.touches[0]) return;
+            const touch = e.touches[0];
+            card.vanillaTilt.onMouseEnter();
+            card.vanillaTilt.onMouseMove({ clientX: touch.clientX, clientY: touch.clientY });
+        }, { passive: true });
+
+        card.addEventListener('touchmove', (e) => {
+            if (!card.vanillaTilt || !e.touches[0]) return;
+            const touch = e.touches[0];
+            card.vanillaTilt.updateElementPosition();
+            card.vanillaTilt.onMouseMove({ clientX: touch.clientX, clientY: touch.clientY });
+        }, { passive: true });
+
+        const resetTilt = () => {
+            if (card.vanillaTilt) card.vanillaTilt.onMouseLeave();
+        };
+        card.addEventListener('touchend', resetTilt, { passive: true });
+        card.addEventListener('touchcancel', resetTilt, { passive: true });
     });
 
     // ============================================================
